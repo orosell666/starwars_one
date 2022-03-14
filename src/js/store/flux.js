@@ -1,23 +1,25 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			character: []
 		},
+			
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
+			},
+			getInfo: (url) => {
+				setStore ({ infoUrl: url});
+			
+			
+			}, 
+			loadCharacter: () => {
+				fetch("https://www.swapi.tech/api/people")
+					.then((res) => res.json())
+					.then((res) => setStore ({ character: res.results}))
+					.catch((error) => console.error(error));
+		
 			},
 			loadSomeData: () => {
 				/**
