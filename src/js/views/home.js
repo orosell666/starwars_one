@@ -15,13 +15,15 @@ export const Home = () => {
 	return(
 	
 	
-	<div>
-		<h1>personajes</h1>
-		<div>
-			{store.character[0][name]}
-		</div>
+	
+		<><div>
+			<h1></h1>
+		</div><div>
+		<Characters/>
+					
+			</div></>
 
-	</div>
+	
 	)
 }
 			
@@ -31,10 +33,4 @@ export const Home = () => {
 
 
 			 
-				//<Characters
-				 // key={value.uid}
-				 // title={value.name}
-				//  url={value.url}
-				//  uid={value.uid}
-				 // type="characters"
-			//	/>
+				
