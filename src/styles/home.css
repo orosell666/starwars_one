@@ -1,0 +1,9 @@
+.background {
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+.card {
+    background-color: black;
+    color: whitesmoke;
+    margin-top: 10px;
+}

@@ -1,7 +1,10 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			character: []
+			character: [],
+			planets: [],
+			starships: [],
+			favourites: []
 		},
 			
 		actions: {
@@ -21,6 +24,31 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch((error) => console.error(error));
 		
 			},
+			loadPlanet: () => {
+				fetch("https://www.swapi.tech/api/planets")
+				.then((res) => res.json())
+				.then((res) => setStore ({planets: res.results}))
+				.catch((error) => console.error(error));
+			},
+			loadStarship: () => {
+				fetch("https://www.swapi.tech/api/starships")
+				.then((res) => res.json())
+				.then((res) => setStore({starships: res.results}))
+				.catch((error) => console.error(error));
+			},
+
+			setFavourites: (fav) => {
+				setStore({favourites: [...getStore().favourites, fav]}) 
+			},
+
+			deleteFavourites: (index) => {
+				setStore({favourites: [...getStore().favourites.filter((fav, i) => index != i)]})
+				
+			},
+
+
+
+
 			loadSomeData: () => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
