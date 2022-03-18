@@ -15,12 +15,15 @@ export const Home = () => {
 	
 	<div className="container col-8">
 		<div>
+			<h1 className="sectionName">Characters</h1>
 			<Characters/>			
 		</div>
 		<div>
+			<h1 className="sectionName">Planets</h1>
 			<Planets />
 		</div>
 		<div>
+			<h1 className="sectionName">Starships</h1>
 			<Starships />
 		</div>
 	</div>
