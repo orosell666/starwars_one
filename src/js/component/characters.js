@@ -1,9 +1,10 @@
 import React, { useContext, useEffect  } from "react";
 import { Context } from "../store/appContext";
+import propTypes from "prop-types";
 
 import "../../styles/home.css";
 
-export const Characters = () => {
+export const Characters = (props) => {
   const { actions, store } = useContext(Context);
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export const Characters = () => {
     <div className="card col-3 mx-2" >
       <img src="https://starwars-visualguide.com/#/characters/1" className="card-img-top" alt="..."  />
       <div className="card-body">
-        <h5 className="card-title">Character</h5>
+        <h5 className="card-title">{props.character.name}</h5>
         <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   More Info...
@@ -49,6 +50,7 @@ export const Characters = () => {
     </div>
   </div>
 	);
+  
  };
 
- 
+ Characters.propTypes = {character:propTypes.json}

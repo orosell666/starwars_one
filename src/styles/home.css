@@ -6,6 +6,7 @@
     background-color: black;
     color: whitesmoke;
     margin-top: 10px;
+    display: flex;
 }
 .modal {
     
