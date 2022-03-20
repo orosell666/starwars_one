@@ -28,15 +28,28 @@ export const Home = () => {
 		</div>
 		<div>
 			<h1 className="sectionName">Planets</h1>
-			<Planets />
-		</div>
+			{store.planet.map((value,index) =>{ console.log(value)
+			return (
+					<div>
+					<Planets key={index}planet={value}/>
+					</div>
+			)
+		})}
 		<div>
 			<h1 className="sectionName">Starships</h1>
-			<Starships />
-		</div>
+			{store.starships.map((value,index) =>{ console.log(value)
+			return (
+					<div>
+					<Starships key={index}starships={value}/>
+					</div>
+			)
+		})}
+			</div>
+	
+		
 	</div>
 
-	
+	</div>
 	)
 }
 			

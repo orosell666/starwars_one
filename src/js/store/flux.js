@@ -2,7 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			character: [],
-			planets: [],
+			planet: [],
 			starships: [],
 			favourites: []
 		},
@@ -18,22 +18,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 			
 			}, 
 			loadCharacter: () => {
-				fetch("https://www.swapi.tech/api/people")
+				fetch("https://swapi.dev/api/people")
 					.then((res) => res.json())
 					.then((res) => setStore ({ character: res.results}))
 					.catch((error) => console.error(error));
 		
 			},
 			loadPlanet: () => {
-				fetch("https://www.swapi.tech/api/planets")
+				fetch("https://www.swapi.tech/api/planets/")
 				.then((res) => res.json())
-				.then((res) => setStore ({planets: res.results}))
+				.then((res) => setStore ({ planet: res.results}))
 				.catch((error) => console.error(error));
 			},
 			loadStarship: () => {
-				fetch("https://www.swapi.tech/api/starships")
+				fetch("https://swapi.dev/api/starships")
 				.then((res) => res.json())
-				.then((res) => setStore({starships: res.results}))
+				.then((res) => setStore({ starships: res.results}))
 				.catch((error) => console.error(error));
 			},
 

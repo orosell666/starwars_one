@@ -15,10 +15,15 @@ export const Characters = (props) => {
 	return (
   <div>
     <div className="card col-3 mx-2" >
-      <img src="https://starwars-visualguide.com/#/characters/1" className="card-img-top" alt="..."  />
+      <img ng-style="{'background-image': 'url(./assets/img/characters/1.jpg), url(./assets/img/big-placeholder.jpg)'}" className="card-img-top" alt="..."  />
       <div className="card-body">
         <h5 className="card-title">{props.character.name}</h5>
-        <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <ul className="list-group list-group-flush" >
+            <li className="list-group-item-dark">Gender :{props.character.gender}</li>
+            
+            <li className="list-group-item-dark">Born in :{props.character.birth_year}</li>
+            
+          </ul>
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   More Info...
 </button>
@@ -31,14 +36,14 @@ export const Characters = (props) => {
             </div>
             <img src="https://starwars-visualguide.com/#/characters/1" className="card-img-top" alt="..."  />
             <div className="modal-body">
-          <p>Height: {}</p>
-          <p>Weight: {}</p>
-          <p>Hair color:{}</p>
-          <p>Skin color{}</p>
-          <p>Eye color{}</p>
-          <p>Birth year: {}</p>
-          <p>Gender: {}</p>
-          <p>Homeworld: {}</p>
+          <p>Height: {props.character.height}</p>
+          <p>Weight:{props.character.mass}</p>
+          <p>Hair color:{props.character.hair_color}</p>
+          <p>Skin color:{props.character.skin_color}</p>
+          <p>Eye color: {props.character.eye_color}</p>
+          <p>Birth year: {props.character.birth_year}</p>
+          <p>Gender: {props.character.gender}</p>
+          <p>Films: {props.character.films}</p>
 
             </div>
             
