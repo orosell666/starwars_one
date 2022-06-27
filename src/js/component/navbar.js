@@ -21,7 +21,7 @@ export const Navbar = () => {
             Favourites</button>
 			<ul
             className="dropdown-menu dropdown-menu-warning dropdown-menu-end"
-            aria-labelledby="dropdownMenuButton2"
+            aria-labelledby="dropdownMenuButton"
           >
             {store.favourites.map((favourite, index) => {
               return (

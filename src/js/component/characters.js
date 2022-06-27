@@ -13,7 +13,7 @@ export const Characters = (props) => {
 
 
 	return (
-  <div>
+  <div className="row g-4 d-flex flex-row flex-nowrap overflow-auto">
     <div className="card col-3 mx-2" >
       <img ng-style="{'background-image': 'url(./assets/img/characters/1.jpg), url(./assets/img/big-placeholder.jpg)'}" className="card-img-top" alt="..."  />
       <div className="card-body">
@@ -26,7 +26,7 @@ export const Characters = (props) => {
           </ul>
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   More Info...
-</button>
+</button></div>
       <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="modal-dialog">
           <div className="modal-content">
@@ -51,7 +51,7 @@ export const Characters = (props) => {
         </div>
       </div>
         <button className="btn  ms-4 mt-1 " onClick={() => {actions.setFavourites({type:"character", id: character.uid, name: character.name})}}>💖</button>
-      </div>
+      
     </div>
   </div>
 	);

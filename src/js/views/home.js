@@ -14,12 +14,12 @@ export const Home = () => {
 	return(
 	
 	
-	<div className="container col-8">
-		<div >
+	<div >
+		<div className="container ">
 			<h1 className="sectionName">Characters</h1>
 			{store.character.map((value,index) =>{ console.log(value)
 				return (
-					<div >
+					<div className="row g-4 d-flex flex-row flex-nowrap overflow-auto">
 					<Characters key={index}character={value}/>
 					</div>
 				)
@@ -30,7 +30,7 @@ export const Home = () => {
 			<h1 className="sectionName">Planets</h1>
 			{store.planet.map((value,index) =>{ console.log(value)
 			return (
-					<div>
+					<div className="row g-4 d-flex flex-row flex-nowrap overflow-auto">
 					<Planets key={index}planet={value}/>
 					</div>
 			)
@@ -39,7 +39,7 @@ export const Home = () => {
 			<h1 className="sectionName">Starships</h1>
 			{store.starships.map((value,index) =>{ console.log(value)
 			return (
-					<div>
+					<div className="row g-4 d-flex flex-row flex-nowrap overflow-auto">
 					<Starships key={index}starships={value}/>
 					</div>
 			)

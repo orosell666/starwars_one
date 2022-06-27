@@ -25,7 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		
 			},
 			loadPlanet: () => {
-				fetch("https://www.swapi.tech/api/planets/")
+				fetch("https://swapi.dev/api/planets")
 				.then((res) => res.json())
 				.then((res) => setStore ({ planet: res.results}))
 				.catch((error) => console.error(error));
