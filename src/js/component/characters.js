@@ -13,17 +13,15 @@ export const Characters = (props) => {
 
 
 	return (
-  <div className="row g-4 d-flex flex-row flex-nowrap overflow-auto">
-    <div className="card col-3 mx-2" >
+    
+    <div className="card col-3 me-2 mt-5" >
       <img ng-style="{'background-image': 'url(./assets/img/characters/1.jpg), url(./assets/img/big-placeholder.jpg)'}" className="card-img-top" alt="..."  />
-      <div className="card-body">
+      <div className="card-body text-center">
         <h5 className="card-title">{props.character.name}</h5>
-        <ul className="list-group list-group-flush" >
-            <li className="list-group-item-dark">Gender :{props.character.gender}</li>
+            <p className="card-text">Gender :{props.character.gender}</p>
+            <p className="card-text">Born in :{props.character.birth_year}</p>
             
-            <li className="list-group-item-dark">Born in :{props.character.birth_year}</li>
-            
-          </ul>
+         
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   More Info...
 </button></div>
@@ -53,7 +51,7 @@ export const Characters = (props) => {
         <button className="btn  ms-4 mt-1 " onClick={() => {actions.setFavourites({type:"character", id: character.uid, name: character.name})}}>💖</button>
       
     </div>
-  </div>
+  
 	);
   
  };

@@ -7,24 +7,27 @@ import "../../styles/home.css";
 export const Planets = (props) => {
     const { actions, store } = useContext(Context);
     
-
+useEffect(()=>{
+  console.log("asdasdasd")
+},[])
 
     useEffect(() => {
+    console.log("fetch en planets")
 		actions.loadPlanet()
+    console.log(store.planet)
 	  },[]); 
 
       return (
-        <div>
-        <div classNameName="card col-3 mx-2" >
+        
+        <div classNameName="card col-3 me-2 mt-5" >
           <img src="..." classNameName="card-img-top" alt="..."  />
-          <div classNameName="card-body">
+          <div classNameName="card-body text-center">
             <h5 classNameName="card-title">{props.planet.name}</h5>
-            <ul className="list-group list-group-flush">
-            <li className="list-group-item">Diameter :{props.planet.diameter}</li>
-            <li className="list-group-item">Climate :{props.planet.climate} </li>
+            <p className="list-group-item">Diameter :{props.planet.diameter}</p>
+            <p className="list-group-item">Climate :{props.planet.climate} </p>
             
             
-          </ul>
+          
             <button type="button" classNameName="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   More Info...
 </button>
@@ -45,7 +48,7 @@ export const Planets = (props) => {
             <button classNameName="btn  ms-4 mt-1" onClick={() => {actions.setFavourites({type:"planet", id: planet.uid, name: planet.name})}}>💖</button>
           </div>
         </div>
-      </div>
+     
         );
 };
 

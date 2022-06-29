@@ -7,21 +7,22 @@ export const Starships = (props) => {
     const { actions, store } = useContext(Context);
 
     useEffect(() => {
+      console.log("starship component")
 		actions.loadStarship()
 	  },[]); 
 
       return (
         <div>
-        <div classNameName="card col-3 mx-2" >
+        <div classNameName="card col-3 me-2 mt-5" >
           <img src="..." classNameName="card-img-top" alt="..."  />
           <div classNameName="card-body">
             <h5 classNameName="card-title">Starship</h5>
-            <ul className="list-group list-group-flush">
-            <li className="list-group-item">Gender :{props.starships.model}</li>
-            <li className="list-group-item">Homeworld :{props.starships.passengers} </li>
-            <li className="list-group-item">Born in :{props.starships.starship_className}</li>
             
-          </ul>
+            <p className="list-group-item">Gender :{props.starships.model}</p>
+            <p className="list-group-item">Homeworld :{props.starships.passengers} </p>
+            <p className="list-group-item">Born in :{props.starships.starship_className}</p>
+            
+          
             <button type="button" classNameName="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   More Info...
 </button>
