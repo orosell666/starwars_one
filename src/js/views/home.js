@@ -29,7 +29,7 @@ export const Home = () => {
 				</div>
 			</div>
 
-			<div>
+			
 				<h1 className="sectionName">Planets</h1>
 				<div className="card-group">
 					<div className="row g-4 d-flex flex-row flex-nowrap overflow-auto">
@@ -44,8 +44,8 @@ export const Home = () => {
 						})}
 					</div>
 				</div>
-			</div>
-				<div>
+			
+				
 					<h1 className="sectionName">Starships</h1>
 					<div className="card-group">
 						<div className="row g-4 d-flex flex-row flex-nowrap overflow-auto">
@@ -56,7 +56,7 @@ export const Home = () => {
 									<Starships key={index} starships={value} />
 								)
 							})}</div></div>
-				</div>
+				
 
 
 			

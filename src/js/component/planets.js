@@ -13,11 +13,11 @@ export const Planets = (props) => {
       return (
         
         <div classNameName="card col-3 me-2 mt-5" >
-          <img src="..." classNameName="card-img-top" alt="..."  />
+          <img ng-style="{'background-image': 'url(./assets/img/characters/1.jpg), url(./assets/img/big-placeholder.jpg)'}" classNameName="card-img-top" alt="..."  />
           <div classNameName="card-body text-center">
             <h5 classNameName="card-title">{props.planet.name}</h5>
-            <p className="list-group-item">Diameter :{props.planet.diameter}</p>
-            <p className="list-group-item">Climate :{props.planet.climate} </p>
+            <p className="card-text">Diameter :{props.planet.diameter}</p>
+            <p className="card-text">Climate :{props.planet.climate} </p>
             
             
           
