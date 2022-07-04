@@ -23,7 +23,7 @@ export const Home = () => {
 					{store.character.map((value, index) => {
 						console.log(value)
 						return (
-							<Characters key={index} character={value} />
+							<Characters key={index} character={value} id={index} />
 						)
 					})}
 				</div>

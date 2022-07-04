@@ -22,17 +22,17 @@ export const Characters = (props) => {
             <p className="card-text">Born in :{props.character.birth_year}</p>
             
          
-        <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.id}>
   More Info...
 </button></div>
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id={"exampleModal" + props.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="card modal-dialog">
           <div className="card modal-content">
             <div className="card modal-header">
               <h5 className="modal-title" id="exampleModalLabel">{props.character.name}</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <img src="https://starwars-visualguide.com/#/characters/1" className="card-img-top" alt="..."  />
+            <img src="https://starwars-visualguide.com/#/characters/" className="card-img-top" alt="..."  />
             <div className="card modal-body">
           <p>Height: {props.character.height}</p>
           <p>Weight:{props.character.mass}</p>
@@ -48,7 +48,7 @@ export const Characters = (props) => {
           </div>
         </div>
       </div>
-        <button className="btn  ms-4 mt-1 " onClick={() => {actions.setFavourites({type:"character", id: character.uid, name: character.name})}}>💖</button>
+        <button className="btn  ms-4 mt-1 " onClick={() => {actions.setFavourites({type:"character", id: props.character.uid, name: props.character.name})}}>💖</button>
       
     </div>
   
@@ -56,4 +56,4 @@ export const Characters = (props) => {
   
  };
 
- Characters.propTypes = {character:propTypes.json}
+ Characters.propTypes = {character:propTypes.json, id:propTypes.number}

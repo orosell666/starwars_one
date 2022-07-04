@@ -7,16 +7,9 @@ import "../../styles/home.css";
 export const Planets = (props) => {
     const { actions, store } = useContext(Context);
     
-useEffect(()=>{
-  console.log("asdasdasd")
-},[])
 
-    useEffect(() => {
-    console.log("fetch en planets")
-		actions.loadPlanet()
-    console.log(store.planet)
-	  },[]); 
 
+    
       return (
         
         <div classNameName="card col-3 me-2 mt-5" >

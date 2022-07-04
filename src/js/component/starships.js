@@ -6,10 +6,7 @@ import "../../styles/home.css";
 export const Starships = (props) => {
     const { actions, store } = useContext(Context);
 
-    useEffect(() => {
-      console.log("starship component")
-		actions.loadStarship()
-	  },[]); 
+   
 
       return (
         <div>
