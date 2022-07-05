@@ -1,15 +1,12 @@
 import React, { useContext, useEffect  } from "react";
 import { Context } from "../store/appContext";
 import propTypes from "prop-types";
-
 import "../../styles/home.css";
 
 export const Characters = (props) => {
   const { actions, store } = useContext(Context);
 
-  useEffect(() => {
-  actions.loadCharacter()
-  },[]); 
+  
 
 
 	return (
