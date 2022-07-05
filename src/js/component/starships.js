@@ -20,26 +20,37 @@ export const Starships = (props) => {
             <p className="card-text">Class :{props.starships.starship_class}</p>
             
           
-            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.id}>
   More Info...
 </button>
-      <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+  <div className="modal fade" id={"exampleModal" + props.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div className="card modal-dialog">
+          <div className="card modal-content">
+            <div className="card modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">{props.starships.name}</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div className="modal-body">
-              ...
+            <img src="https://starwars-visualguide.com/#/starships/" className="card-img-top" alt="..."  />
+            <div className="card modal-body">
+          <p>model: {props.starships.model}</p>
+          <p>manufacturer:{props.starships.manufacturer}</p>
+          <p>cost in credits:{props.starships.cost_in_credits}</p>
+          <p>length:{props.starships.length}</p>
+          <p>crew: {props.starships.crew}</p>
+          <p>passengers: {props.starships.passengers}</p>
+          <p>consumables: {props.starships.consumables}</p>
+          <p>Class: {props.starships.starship_class}</p>
+          <p>Films: {props.starships.films}</p>
+
             </div>
             
           </div>
         </div>
       </div>
-            <button className="btn  ms-4 mt-1" onClick={() => {actions.setFavourites({type:"planet", id: planet.uid, name: planet.name})}}>💖</button>
+      </div>
+            <button className="btn  ms-4 mt-1" onClick={() => {actions.setFavourites({type:"starships", id: props.starships.uid, name: props.starships.name})}}>💖</button>
           </div>
-        </div>
+        
       
         );
 }
