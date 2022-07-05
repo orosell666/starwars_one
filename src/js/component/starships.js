@@ -20,14 +20,14 @@ export const Starships = (props) => {
             <p className="card-text">Class :{props.starships.starship_class}</p>
             
           
-            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.id}>
+            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.starships.id}>
   More Info...
 </button>
-  <div className="modal fade" id={"exampleModal" + props.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div className="modal fade" id={"exampleModal" + props.starships.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="card modal-dialog">
           <div className="card modal-content">
             <div className="card modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">{props.starships.name}</h5>
+              <h5 className="modal-title" id="exampleModalLabel">{props.starships.model}</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <img src="https://starwars-visualguide.com/#/starships/" className="card-img-top" alt="..."  />

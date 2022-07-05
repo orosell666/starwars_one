@@ -37,7 +37,7 @@ export const Home = () => {
 							console.log(value)
 							return (
 
-								<Planets key={index} planet={value} />
+								<Planets key={index} planet={value} id={index} />
 								
 
 							)
@@ -53,7 +53,7 @@ export const Home = () => {
 								console.log(value)
 								return (
 
-									<Starships key={index} starships={value} />
+									<Starships key={index} starships={value} id={index}/>
 								)
 							})}</div></div>
 				

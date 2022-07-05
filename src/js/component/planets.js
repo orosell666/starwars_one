@@ -20,10 +20,10 @@ export const Planets = (props) => {
             
             
           
-            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.id}>
+            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.planet.id}>
   More Info...
 </button>
-      <div className="modal fade" id={"exampleModal" + props.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id={"exampleModal" + props.planet.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div className="card modal-dialog">
           <div className="card modal-content">
             <div className="card modal-header">
