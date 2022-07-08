@@ -16,7 +16,6 @@ export const Starships = (props) => {
             <h5 className="card-title">{props.starships.name}</h5>
             
             <p className="card-text">Model :{props.starships.model}</p>
-            <p className="card-text">Passengers :{props.starships.passengers} </p>
             <p className="card-text">Class :{props.starships.starship_class}</p>
             
           
@@ -32,7 +31,7 @@ export const Starships = (props) => {
             </div>
             <img src="https://starwars-visualguide.com/#/starships/" className="card-img-top" alt="..."  />
             <div className="card modal-body">
-          <p>model: {props.starships.model}</p>
+          
           <p>manufacturer:{props.starships.manufacturer}</p>
           <p>cost in credits:{props.starships.cost_in_credits}</p>
           <p>length:{props.starships.length}</p>
@@ -40,8 +39,7 @@ export const Starships = (props) => {
           <p>passengers: {props.starships.passengers}</p>
           <p>consumables: {props.starships.consumables}</p>
           <p>Class: {props.starships.starship_class}</p>
-          <p>Films: {props.starships.films}</p>
-
+         
             </div>
             
           </div>

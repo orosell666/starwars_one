@@ -30,7 +30,7 @@ export const Characters = (props) => {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <img src="https://starwars-visualguide.com/#/characters/" className="card-img-top" alt="..."  />
-            <div className="card modal-body">
+          <div className="card modal-body">
           <p>Height: {props.character.height}</p>
           <p>Weight:{props.character.mass}</p>
           <p>Hair color:{props.character.hair_color}</p>
@@ -38,14 +38,14 @@ export const Characters = (props) => {
           <p>Eye color: {props.character.eye_color}</p>
           <p>Birth year: {props.character.birth_year}</p>
           <p>Gender: {props.character.gender}</p>
-          <p>Films: {props.character.films}</p>
+          
 
             </div>
             
           </div>
         </div>
       </div>
-        <button className="btn  ms-4 mt-1 " onClick={() => {actions.setFavourites({type:"character", id: props.character.uid, name: props.character.name})}}>💖</button>
+        <button className="btn  ms-4 mt-1 justify-content-center" onClick={() => {actions.setFavourites({type:"character", id: props.character.uid, name: props.character.name})}}>💖</button>
       
     </div>
   
