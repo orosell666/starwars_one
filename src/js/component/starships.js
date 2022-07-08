@@ -13,10 +13,10 @@ export const Starships = (props) => {
         <div className="card col-3 me-2 mt-5" >
           <img src="..." className="card-img-top" alt="..."  />
           <div className="card-body text-center">
-            <h5 className="card-title">{props.starships.name}</h5>
+            <h5 className="card-title yellow">{props.starships.name}</h5>
             
-            <p className="card-text">Model :{props.starships.model}</p>
-            <p className="card-text">Class :{props.starships.starship_class}</p>
+            <p className="card-text"><strong className="yellow">Model: </strong>{props.starships.model}</p>
+            <p className="card-text"><strong className="yellow">Class: </strong>{props.starships.starship_class}</p>
             
           
             <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.starships.id}>
@@ -30,15 +30,15 @@ export const Starships = (props) => {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <img src="https://starwars-visualguide.com/#/starships/" className="card-img-top" alt="..."  />
-            <div className="card modal-body">
+            <div className="card modal-body text-center">
           
-          <p>manufacturer:{props.starships.manufacturer}</p>
-          <p>cost in credits:{props.starships.cost_in_credits}</p>
-          <p>length:{props.starships.length}</p>
-          <p>crew: {props.starships.crew}</p>
-          <p>passengers: {props.starships.passengers}</p>
-          <p>consumables: {props.starships.consumables}</p>
-          <p>Class: {props.starships.starship_class}</p>
+          <p><strong className="yellow">Manufacturer: </strong>{props.starships.manufacturer}</p>
+          <p><strong className="yellow">Cost in Credits: </strong>{props.starships.cost_in_credits}</p>
+          <p><strong className="yellow">Length: </strong>{props.starships.length}</p>
+          <p><strong className="yellow">Crew: </strong>{props.starships.crew}</p>
+          <p><strong className="yellow">Passengers: </strong>{props.starships.passengers}</p>
+          <p><strong className="yellow">Consumables: </strong>{props.starships.consumables}</p>
+          <p><strong className="yellow">Class: </strong>{props.starships.starship_class}</p>
          
             </div>
             

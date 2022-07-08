@@ -14,9 +14,9 @@ export const Planets = (props) => {
         <div className="card col-3 me-2 mt-5" >
           <img ng-style="{'background-image': 'url(./assets/img/planets/1.jpg), url(./assets/img/big-placeholder.jpg)'}" className="card-img-top" alt="..."  />
           <div className="card-body text-center">
-            <h5 className="card-title">{props.planet.name}</h5>
-            <p className="card-text">Diameter :{props.planet.diameter}</p>
-            <p className="card-text">Climate :{props.planet.climate} </p>
+            <h5 className="card-title yellow">{props.planet.name}</h5>
+            <p className="card-text"><strong className="yellow">Diameter: </strong>{props.planet.diameter}</p>
+            <p className="card-text"><strong className="yellow">Climate: </strong>{props.planet.climate} </p>
             
             
           
@@ -27,19 +27,19 @@ export const Planets = (props) => {
         <div className="card modal-dialog">
           <div className="card modal-content">
             <div className="card modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">{props.planet.name}</h5>
+              <h5 className="modal-title yellow" id="exampleModalLabel">{props.planet.name}</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div className="card modal-body">
+            <div className="card modal-body text-center">
           <img src="https://starwars-visualguide.com/#/planets/" className="card-img-top" alt="..."  />
          
-          <p>Rotation Period:{props.planet.rotation_period}</p>
-          <p>Diameter:{props.planet.diameter}</p>
-          <p>Climate:{props.planet.climate}</p>
-          <p>Gravity: {props.planet.gravity}</p>
-          <p>Terrain: {props.planet.terrain}</p>
-          <p>Surface Water: {props.planet.surface_water}</p>
-          <p>Population: {props.planet.population}</p>
+          <p><strong className="yellow">Rotation Period: </strong> {props.planet.rotation_period}</p>
+          <p><strong className="yellow">Diameter: </strong>{props.planet.diameter}</p>
+          <p><strong className="yellow">Climate: </strong>{props.planet.climate}</p>
+          <p><strong className="yellow">Gravity: </strong> {props.planet.gravity}</p>
+          <p><strong className="yellow">Terrain: </strong> {props.planet.terrain}</p>
+          <p><strong className="yellow">Surface Water: </strong> {props.planet.surface_water}</p>
+          <p><strong className="yellow">Population: </strong> {props.planet.population}</p>
           
           
             </div>

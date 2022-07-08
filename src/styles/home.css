@@ -13,11 +13,15 @@
     color: rgb(5, 5, 5);
 }
 .sectionName {
-    color: rgba(252, 215, 8, 0.747);
+    color: rgba(255, 222, 44, 0.747);
     margin-top: 20px;
     margin-left: 10px;
 }
 .list-group-flush  {
     background-color: black;
     color: white;
+}
+
+.yellow {
+    color: rgba(255, 222, 44, 0.747);
 }

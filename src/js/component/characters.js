@@ -14,9 +14,9 @@ export const Characters = (props) => {
     <div className="card col-3 me-2 mt-5" >
       <img ng-style="{'background-image': 'url(./assets/img/characters/1.jpg), url(./assets/img/big-placeholder.jpg)'}" className="card-img-top" alt="..."  />
       <div className="card-body text-center">
-        <h5 className="card-title">{props.character.name}</h5>
-            <p className="card-text">Gender :{props.character.gender}</p>
-            <p className="card-text">Born in :{props.character.birth_year}</p>
+        <h5 className="card-title yellow">{props.character.name}</h5>
+            <p className="card-text"><strong className="yellow">Gender: </strong>{props.character.gender}</p>
+            <p className="card-text"><strong className="yellow">Born In: </strong>{props.character.birth_year}</p>
             
          
         <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.id}>
@@ -26,18 +26,18 @@ export const Characters = (props) => {
         <div className="card modal-dialog">
           <div className="card modal-content">
             <div className="card modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">{props.character.name}</h5>
+              <h5 className="modal-title yellow" id="exampleModalLabel">{props.character.name}</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <img src="https://starwars-visualguide.com/#/characters/" className="card-img-top" alt="..."  />
-          <div className="card modal-body">
-          <p>Height: {props.character.height}</p>
-          <p>Weight:{props.character.mass}</p>
-          <p>Hair color:{props.character.hair_color}</p>
-          <p>Skin color:{props.character.skin_color}</p>
-          <p>Eye color: {props.character.eye_color}</p>
-          <p>Birth year: {props.character.birth_year}</p>
-          <p>Gender: {props.character.gender}</p>
+          <div className="card modal-body text-center">
+          <p><strong className="yellow">Height: </strong>{props.character.height}</p>
+          <p><strong className="yellow">Weight: </strong>{props.character.mass}</p>
+          <p><strong className="yellow">Hair Color: </strong>{props.character.hair_color}</p>
+          <p><strong className="yellow">Skin Color: </strong>{props.character.skin_color}</p>
+          <p><strong className="yellow">Eye Color: </strong>{props.character.eye_color}</p>
+          <p><strong className="yellow">Birth Year: </strong>{props.character.birth_year}</p>
+          <p><strong className="yellow">Gender: </strong>{props.character.gender}</p>
           
 
             </div>
