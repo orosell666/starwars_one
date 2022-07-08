@@ -17,7 +17,7 @@ export const Planets = (props) => {
       return (
         
         <div className="card col-3 me-2 mt-5" >
-          <img ng-style="{'background-image': 'url(./assets/img/planets/1.jpg), url(./assets/img/big-placeholder.jpg)'}" className="card-img-top" alt="..."  />
+          <img src= "https://via.placeholder.com/150." className="card-img-top mt-2" alt="..."  />
           <div className="card-body text-center">
             <h5 className="card-title yellow">{props.planet.name}</h5>
             <p className="card-text"><strong className="yellow">Diameter: </strong>{props.planet.diameter}</p>
@@ -36,7 +36,7 @@ export const Planets = (props) => {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="card modal-body text-center">
-          <img src="https://starwars-visualguide.com/#/planets/" className="card-img-top" alt="..."  />
+          <img src="https://starwars-visualguide.com./assets/img/planets/2.jpg" className="card-img-top" alt="..."  />
          
           <p><strong className="yellow">Rotation Period: </strong> {props.planet.rotation_period}</p>
           <p><strong className="yellow">Diameter: </strong>{props.planet.diameter}</p>

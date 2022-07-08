@@ -25,15 +25,15 @@ export const Navbar = () => {
           >
             {store.favourites.map((favourite, index) => {
               return (
-                <li className="card my-2" key={favourite.id}>
+                <li className="dropdown-item" key={favourite.id}>
                   {favourite.name}{" "}
                   <button
-                    className="btn btn-warning"
+                    className="btn btn-sm row justify-content-md-end" 
                     onClick={() => {
                       actions.deleteFavourites(index);
                     }}
                   >
-                    ❌
+                      "           "❌
                   </button>
                 </li>
               );

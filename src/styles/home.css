@@ -25,3 +25,7 @@
 .yellow {
     color: rgba(255, 212, 55);
 }
+.blankimage {
+    height: 100%;
+    width: 100%;
+}

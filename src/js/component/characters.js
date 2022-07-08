@@ -12,7 +12,7 @@ export const Characters = (props) => {
 	return (
     
     <div className="card col-3 me-2 mt-5" >
-      <img ng-style="{'background-image': 'url(./assets/img/characters/1.jpg), url(./assets/img/big-placeholder.jpg)'}" className="card-img-top" alt="..."  />
+      <img src="https://via.placeholder.com/150" className="mt-2 card-img-top img-fluid blankimage" alt="..."  />
       <div className="card-body text-center">
         <h5 className="card-title yellow">{props.character.name}</h5>
             <p className="card-text"><strong className="yellow">Gender: </strong>{props.character.gender}</p>
@@ -29,7 +29,7 @@ export const Characters = (props) => {
               <h5 className="modal-title yellow" id="exampleModalLabel">{props.character.name}</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <img src="https://starwars-visualguide.com/#/characters/" className="card-img-top" alt="..."  />
+            <img src="https://starwars-visualguide.com/assets/img/characters/1.jpg" className="card-img-top" alt="..."  />
           <div className="card modal-body text-center">
           <p><strong className="yellow">Height: </strong>{props.character.height}</p>
           <p><strong className="yellow">Weight: </strong>{props.character.mass}</p>
