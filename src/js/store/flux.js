@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			planet: [],
 			starships: [],
 			favourites: [],
+			films: [],
 			
 		},
 			
@@ -27,6 +28,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://swapi.dev/api/starships")
 				.then((res) => res.json())
 				.then((res) => setStore({ starships: res.results}))
+				.catch((error) => console.error(error));
+			},
+			loadFilms: () => {
+				fetch("https://swapi.dev/api/films")
+				.then((res) => res.json())
+				.then((res) => setStore({ films: res.results}))
 				.catch((error) => console.error(error));
 			},
 			

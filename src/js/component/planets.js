@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
 import propTypes from "prop-types";
 import "../../styles/home.css";
@@ -6,6 +6,11 @@ import "../../styles/home.css";
 export const Planets = (props) => {
     const { actions, store } = useContext(Context);
     
+
+    useEffect(() => {
+      console.log(props.planet.name)
+  
+    });
 
 
     
@@ -20,14 +25,14 @@ export const Planets = (props) => {
             
             
           
-            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#exampleModal" + props.planet.id}>
+            <button type="button" className="btn btn-warning" data-bs-toggle="modal" data-bs-target={"#examplePlanetModal" + props.pid}>
   More Info...
 </button></div>
-      <div className="modal fade" id={"exampleModal" + props.planet.id} tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal fade" id={"examplePlanetModal" + props.pid} tabIndex="-1" aria-labelledby="examplePlanetModalLabel" aria-hidden="true">
         <div className="card modal-dialog">
           <div className="card modal-content">
             <div className="card modal-header">
-              <h5 className="modal-title yellow" id="exampleModalLabel">{props.planet.name}</h5>
+              <h5 className="modal-title yellow" id="examplePlanetModalLabel">{props.planet.name}</h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="card modal-body text-center">
@@ -54,4 +59,4 @@ export const Planets = (props) => {
         );
 };
 
-Planets.propTypes = {planet:propTypes.json, id:propTypes.number}
+Planets.propTypes = {planet:propTypes.any, pid:propTypes.any}
