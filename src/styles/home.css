@@ -13,7 +13,7 @@
     color: rgb(5, 5, 5);
 }
 .sectionName {
-    color: rgba(255, 222, 44, 0.747);
+    color: rgb(255, 212, 55);
     margin-top: 20px;
     margin-left: 10px;
 }
@@ -23,5 +23,5 @@
 }
 
 .yellow {
-    color: rgba(255, 222, 44, 0.747);
+    color: rgba(255, 212, 55);
 }
